@@ -2,8 +2,13 @@
  * General overrides to play nice with admin theme
  */
 
-.page-admin select[multiple] {
+.page-admin select[multiple],
+.page-admin .select2-dropdown,
+.page-admin .select2-container {
   min-width: 300px;
+}
+
+.page-admin select[multiple] {
   max-width: 500px;
 }
 

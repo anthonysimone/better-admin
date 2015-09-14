@@ -18,7 +18,14 @@ function better_admin_menu() {
   return $items;
 }
 
-
+/**
+ * Implements hook_preprocess_html
+ */
+function better_admin_preprocess_html(&$variables) {
+  if (path_is_admin(current_path())) {
+    $variables['classes_array'][] = 'better-admin-backend';
+  }
+}
 
 /**
  * Implements hook_preprocess_form_element
